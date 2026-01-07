@@ -1,0 +1,11 @@
+name: string_calculator
+description: A simple string calculator for the TDD Kata.
+version: 1.0.0
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  # No runtime dependencies yet
+
+dev_dependencies:
+  test: ^1.24.0
