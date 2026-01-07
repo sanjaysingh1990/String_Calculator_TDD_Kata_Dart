@@ -52,5 +52,11 @@ void main() {
     expect(calculator.add('2,1001'), equals(2));
   });
 
+  test('Supports delimiter of any length', () {
+    final calculator = StringCalculator();
+    expect(calculator.add('//[***]\n1***2***3'), equals(6));
+  });
+
+
 
 }
