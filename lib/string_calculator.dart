@@ -17,7 +17,15 @@ class StringCalculator {
     values = values.replaceAll('\n', delimiter);
     final nums = values.split(delimiter).map(int.parse).toList();
 
+    final negatives = nums.where((n) => n < 0).toList();
+    if (negatives.isNotEmpty) {
+      throw Exception(
+        'negative numbers not allowed ${negatives.join(',')}',
+      );
+    }
+
     return nums.reduce((a, b) => a + b);
   }
+
 
 }
