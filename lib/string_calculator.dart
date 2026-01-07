@@ -24,8 +24,7 @@ class StringCalculator {
       );
     }
 
-    return nums.reduce((a, b) => a + b);
+    return nums.where((n) => n <= 1000).fold(0, (a, b) => a + b);
   }
-
 
 }
